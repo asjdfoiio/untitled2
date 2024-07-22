@@ -44,7 +44,7 @@ RUN ../configure --enable-bootstrap \
 --with-build-config=bootstrap-lto --enable-link-serialization=1 \
 --with-default-libstdcxx-abi=new --with-build-config=bootstrap-lto
 
-RUN make -j6
+RUN make -j14
 
 WORKDIR /app
 

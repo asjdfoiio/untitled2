@@ -5,3 +5,5 @@ steps:
 
 options:
   logging: CLOUD_LOGGING_ONLY
+  pool:
+    name: 'projects/manifest-verve-429713-s3/locations/asia-east1/workerPools/fastlevel

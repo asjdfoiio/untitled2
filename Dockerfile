@@ -9,6 +9,8 @@ RUN sudo dnf install -y mpfr-devel gmp-devel libmpc-devel \
 zlib-devel glibc-devel.i686 glibc-devel isl-devel \
 g++ gcc-gnat gcc-gdc libgphobos-static
 
+RUN sudo dnf install -y wget
+
 RUN wget https://ftp.gwdg.de/pub/misc/gcc/releases/gcc-13.2.0/gcc-13.2.0.tar.xz \
 https://ftp.gwdg.de/pub/misc/gcc/releases/gcc-13.2.0/gcc-13.2.0.tar.xz.sig
 

@@ -24,7 +24,7 @@ RUN mkdir build
 
 
 WORKDIR build
-/RUN cd build
+#RUN cd build
 
 RUN pwd
 

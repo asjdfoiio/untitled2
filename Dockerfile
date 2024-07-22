@@ -16,13 +16,17 @@ https://ftp.gwdg.de/pub/misc/gcc/releases/gcc-13.2.0/gcc-13.2.0.tar.xz.sig
 
 RUN tar xvf gcc-13.2.0.tar.xz
 
-RUN cd gcc-13.2.0
+WORKDIR gcc-13.2.0
+
+#RUN cd gcc-13.2.0
 
 RUN mkdir build
 
-RUN cd build
 
-RUN echo "Current directory is: $(pwd)"
+WORKDIR build
+/RUN cd build
+
+RUN pwd
 
 RUN ../configure --enable-bootstrap \
 --enable-languages=c,c++,fortran,objc,obj-c++,ada,go,d,lto \
@@ -41,6 +45,8 @@ RUN ../configure --enable-bootstrap \
 --with-default-libstdcxx-abi=new --with-build-config=bootstrap-lto
 
 RUN make -j6
+
+WORKDIR /app
 
 
 CMD ["gcc", "--version"]

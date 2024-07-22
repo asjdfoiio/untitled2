@@ -22,6 +22,8 @@ RUN mkdir build
 
 RUN cd build
 
+RUN echo "Current directory is: $(pwd)"
+
 RUN ../configure --enable-bootstrap \
 --enable-languages=c,c++,fortran,objc,obj-c++,ada,go,d,lto \
 --prefix=/usr --program-suffix=-13.2 --mandir=/usr/share/man \

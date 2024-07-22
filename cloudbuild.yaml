@@ -1,11 +1,16 @@
 steps:
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/myapp:$COMMIT_SHA', '.']
+    script: |
+      docker build -t asia-east1-docker.pkg.dev/$PROJECT_ID/gcc132/gcc132-image:tag132 .
+      automapSubstitutions: true
 
 options:
   logging: CLOUD_LOGGING_ONLY
   pool:
     name: 'projects/manifest-verve-429713-s3/locations/asia-east1/workerPools/fastlevel'
+
+images:
+  - 'asia-east1-docker.pkg.dev/$PROJECT_ID/gcc132/gcc132-image:tag132'
 
 timeout: 172800s

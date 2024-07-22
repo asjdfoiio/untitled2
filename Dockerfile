@@ -5,7 +5,7 @@ WORKDIR /app
 
 RUN sudo dnf groupinstall "Development tools"
 
-RUN sudo dnf install mpfr-devel gmp-devel libmpc-devel \
+RUN sudo dnf install -y mpfr-devel gmp-devel libmpc-devel \
 zlib-devel glibc-devel.i686 glibc-devel isl-devel \
 g++ gcc-gnat gcc-gdc libgphobos-static
 

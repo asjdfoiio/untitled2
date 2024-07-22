@@ -3,7 +3,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     script: |
       docker build -t asia-east1-docker.pkg.dev/$PROJECT_ID/gcc132/gcc132-image:tag132 .
-      automapSubstitutions: true
+    automapSubstitutions: true
 
 options:
   logging: CLOUD_LOGGING_ONLY
